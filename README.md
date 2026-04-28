@@ -1,7 +1,18 @@
-# aenimalabs-redirect
+# aenimalabs
 
-Tiny GitHub Pages site whose only purpose is to redirect `https://aenimalabs.com` to `https://aenima.io`.
+Public site for **aenima labs**. Served via GitHub Pages at [aenimalabs.com](https://aenimalabs.com); [aenima.io](https://aenima.io) 301-redirects to this canonical domain.
 
-GitHub Pages only serves content for a domain that's explicitly attached to a Pages repo (via `CNAME` file); to get HTTPS on `aenimalabs.com` and have it redirect, we need a dedicated site. `index.html` does both a `<meta refresh>` and a JavaScript `window.location.replace` so redirection is immediate regardless of client.
+## What's here
 
-The canonical site lives at [chernov-consulting/aenima](https://github.com/chernov-consulting/aenima).
+- `index.html` — the landing page
+- `styles.css` — hand-written CSS, no build step
+- `CNAME` — tells GitHub Pages the custom domain
+- `favicon.svg`
+
+## What was here before
+
+The pre-rebrand Rust prototype lives on branch [`archive/anima-scaffold`](https://github.com/chernov-consulting/aenimalabs/tree/archive/anima-scaffold). It was never shipped; kept as a record.
+
+## Deploying
+
+Pushes to `main` are deployed automatically by GitHub Pages.

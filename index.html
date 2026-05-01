@@ -46,21 +46,26 @@
 	<!-- Hero -->
 	<section class="hero">
 		<div class="hero-inner">
-			<div class="eyebrow">aenima labs</div>
-			<h1>What makes us human,<br><span class="hero-accent">preserved.</span></h1>
-			<p class="hero-lede">
+			<div class="eyebrow reveal" style="--reveal-delay: 0ms">aenima labs</div>
+			<h1 class="reveal" style="--reveal-delay: 80ms">What makes us human,<br><span class="hero-accent">preserved.</span></h1>
+			<p class="hero-lede reveal" style="--reveal-delay: 180ms">
 				We build technology that preserves and continues human identity, making the stories, values, and voices of a life accessible across generations.
 			</p>
-			<div class="hero-actions">
+			<div class="hero-actions reveal" style="--reveal-delay: 260ms">
 				<a class="btn btn-primary" href="#kodama">Meet Kodama</a>
 				<a class="btn btn-ghost" href="#contact">Get in touch</a>
 			</div>
 		</div>
 		<div class="hero-gradient" aria-hidden="true"></div>
+		<div class="hero-grain" aria-hidden="true"></div>
+		<a class="hero-scroll-cue" href="#about" aria-label="Scroll to next section">
+			<span class="hero-scroll-cue-label">Scroll</span>
+			<span class="hero-scroll-cue-line" aria-hidden="true"></span>
+		</a>
 	</section>
 
 	<!-- About -->
-	<section class="about">
+	<section id="about" class="about">
 		<div class="about-inner">
 			<div class="section-label">About</div>
 			<div class="about-grid">
@@ -142,12 +147,19 @@
 			<span>aenima labs</span>
 		</div>
 		<div class="site-footer-meta">
-			<span>&copy; 2026 aenima labs</span>
+			<span>&copy; <span id="year">2026</span> aenima labs</span>
 			<span class="site-footer-divider">&middot;</span>
 			<a href="mailto:hello@aenima.io">hello@aenima.io</a>
 		</div>
 	</div>
 </footer>
+
+<script>
+	(function () {
+		var y = document.getElementById('year');
+		if (y) y.textContent = new Date().getFullYear();
+	})();
+</script>
 
 </body>
 </html>

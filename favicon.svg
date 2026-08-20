@@ -1,15 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-	<defs>
-		<linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-			<stop offset="0%" stop-color="#7EB8DA"/>
-			<stop offset="100%" stop-color="#4A90B8"/>
-		</linearGradient>
-	</defs>
-	<rect width="80" height="80" rx="14" fill="#0D1B2A"/>
-	<line x1="16" y1="64" x2="38" y2="16" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round"/>
-	<line x1="42" y1="16" x2="42" y2="64" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round"/>
-	<line x1="24" y1="46" x2="42" y2="46" stroke="#7EB8DA" stroke-width="4" stroke-linecap="round"/>
-	<line x1="42" y1="16" x2="64" y2="16" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round"/>
-	<line x1="42" y1="40" x2="60" y2="40" stroke="#7EB8DA" stroke-width="4" stroke-linecap="round"/>
-	<line x1="42" y1="64" x2="64" y2="64" stroke="url(#g)" stroke-width="5.5" stroke-linecap="round"/>
+	<circle cx="40" cy="40" r="40" fill="#1A1A2E"/>
+	<!-- Æ ligature: A-stroke + E -->
+	<!-- A diagonal left leg -->
+	<line x1="18" y1="58" x2="34" y2="20" stroke="#F5F3EF" stroke-width="4.5" stroke-linecap="round"/>
+	<!-- A crossbar -->
+	<line x1="22" y1="44" x2="33" y2="44" stroke="#F5F3EF" stroke-width="3.5" stroke-linecap="round"/>
+	<!-- E vertical spine -->
+	<line x1="36" y1="20" x2="36" y2="58" stroke="#F5F3EF" stroke-width="4.5" stroke-linecap="round"/>
+	<!-- E top arm -->
+	<line x1="36" y1="20" x2="56" y2="20" stroke="#F5F3EF" stroke-width="4" stroke-linecap="round"/>
+	<!-- E mid arm -->
+	<line x1="36" y1="40" x2="52" y2="40" stroke="#F5F3EF" stroke-width="3.5" stroke-linecap="round"/>
+	<!-- E bottom arm -->
+	<line x1="36" y1="58" x2="56" y2="58" stroke="#F5F3EF" stroke-width="4" stroke-linecap="round"/>
 </svg>

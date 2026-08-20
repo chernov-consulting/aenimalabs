@@ -765,7 +765,6 @@ h2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 32px;
-	margin-bottom: 40px;
 }
 .team-card {
 	border: 1px solid var(--divider);
@@ -849,17 +848,6 @@ h2 {
 	transition: color 180ms ease;
 }
 .team-link:hover { color: var(--brand-blue); }
-.team-footnote {
-	font-family: 'DM Sans', sans-serif;
-	font-size: 16px;
-	line-height: 1.65;
-	color: var(--text-dim);
-	text-align: center;
-	max-width: 600px;
-	margin: 0 auto;
-	font-style: italic;
-}
-
 /* ─── Contact ─── */
 
 .contact {

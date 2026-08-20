@@ -12,7 +12,7 @@
 	<link rel="icon" type="image/svg+xml" href="favicon.svg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,6 +32,8 @@
 		<span class="brand-wordmark">Ænima <span class="brand-wordmark-light">Labs</span></span>
 	</a>
 	<nav class="site-nav-links">
+		<a class="nav-secondary" href="#mission">Mission</a>
+		<a class="nav-secondary" href="#ethics">Ethics</a>
 		<a href="#kodama">Kodama</a>
 		<a href="#team">Team</a>
 		<a href="#contact">Contact</a>
@@ -44,12 +46,12 @@
 	<section class="hero">
 		<div class="hero-inner">
 			<div class="eyebrow reveal" style="--reveal-delay:0ms">An R&amp;D Laboratory</div>
-			<h1 class="reveal" style="--reveal-delay:80ms">Technology<br><span class="hero-accent">with a soul.</span></h1>
-			<p class="hero-sub reveal" style="--reveal-delay:160ms">What makes us human, preserved.</p>
-			<p class="hero-lede reveal" style="--reveal-delay:240ms">
+			<h1 class="reveal" style="--reveal-delay:40ms">Technology<br><span class="hero-accent">with a soul.</span></h1>
+			<p class="hero-sub reveal" style="--reveal-delay:80ms">What makes us human, preserved.</p>
+			<p class="hero-lede reveal" style="--reveal-delay:120ms">
 				We develop technology that serves all of mankind — responsibly, ethically, and with lasting positive impact. Projects graduate. The lab endures.
 			</p>
-			<div class="hero-actions reveal" style="--reveal-delay:320ms">
+			<div class="hero-actions reveal" style="--reveal-delay:160ms">
 				<a class="btn btn-primary" href="#kodama">Meet Kodama</a>
 				<a class="btn btn-ghost" href="#mission">Our mission</a>
 			</div>
@@ -65,6 +67,9 @@
 	<!-- ─── Mission & Vision ─── -->
 	<section id="mission" class="mission">
 		<div class="mission-inner">
+			<div class="section-label">Purpose</div>
+			<h2>Why we exist.</h2>
+			<p class="mission-lede">A laboratory is a commitment to method, not to any single outcome.</p>
 			<div class="mission-grid">
 				<div class="mission-block">
 					<div class="section-label">Vision</div>
@@ -156,7 +161,7 @@
 	</section>
 
 	<!-- ─── Ethical Code ─── -->
-	<section class="ethics">
+	<section id="ethics" class="ethics">
 		<div class="ethics-inner">
 			<div class="section-label">Ethical code</div>
 			<h2>Six non-negotiables.</h2>
@@ -283,17 +288,27 @@
 					</div>
 				</div>
 				<div class="product-status-panel">
+					<div class="product-status-label">Status</div>
 					<div class="product-status-row">
-						<span class="status-dot"></span>
-						<span>Working prototype &middot; in active development</span>
+						<span class="status-dot" aria-hidden="true"></span>
+						<span>Working prototype in active development</span>
 					</div>
 					<div class="product-status-row">
-						<span class="status-icon">◎</span>
+						<span class="status-glyph" aria-hidden="true">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.4"/>
+								<circle cx="7" cy="7" r="2.4" fill="currentColor"/>
+							</svg>
+						</span>
 						<span>90-day validation gate in progress</span>
 					</div>
 					<div class="product-status-row">
-						<span class="status-icon">◈</span>
-						<span>Go / No-Go: November 2026</span>
+						<span class="status-glyph" aria-hidden="true">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<path d="M7 1.6L12.4 7L7 12.4L1.6 7z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+							</svg>
+						</span>
+						<span>Go / No-Go decision in November 2026</span>
 					</div>
 					<a class="btn btn-warm" href="mailto:hello@aenima.io?subject=Kodama%20enquiry">Register interest</a>
 				</div>
@@ -306,6 +321,7 @@
 		<div class="portfolio-inner">
 			<div class="section-label">Portfolio</div>
 			<h2>What comes next.</h2>
+			<p class="portfolio-lede">One mission is active. The others stay deliberately unstarted until it clears its gate.</p>
 			<div class="portfolio-grid">
 				<div class="portfolio-item portfolio-item-active">
 					<div class="portfolio-status">Active &middot; Validate</div>
@@ -336,6 +352,7 @@
 		<div class="team-inner">
 			<div class="section-label">Founders</div>
 			<h2>Who we are.</h2>
+			<p class="team-lede">Two founders with deliberately different centres of gravity.</p>
 			<div class="team-grid">
 				<div class="team-card">
 					<div class="team-card-header">
@@ -418,6 +435,21 @@
 	(function () {
 		var y = document.getElementById('year');
 		if (y) y.textContent = new Date().getFullYear();
+
+		var nav = document.querySelector('.site-nav');
+		if (!nav) return;
+		var ticking = false;
+		function sync() {
+			nav.classList.toggle('is-scrolled', window.scrollY > 80);
+			ticking = false;
+		}
+		window.addEventListener('scroll', function () {
+			if (!ticking) {
+				ticking = true;
+				window.requestAnimationFrame(sync);
+			}
+		}, { passive: true });
+		sync();
 	})();
 </script>
 

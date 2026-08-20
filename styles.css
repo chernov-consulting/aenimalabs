@@ -445,13 +445,14 @@ h2 {
 }
 .manifesto-inner { max-width: 1100px; margin: 0 auto; }
 .manifesto h2 { color: #FFF; margin-bottom: 12px; }
+/* Heading occupies the first cell, so both rows carry three items */
 .manifesto-list {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
-/* Fifth point spans the row so the grid closes evenly */
-.manifesto-point:nth-child(5) { grid-column: 1 / -1; }
+.manifesto-intro { align-self: start; }
+.manifesto-intro .manifesto-lede { margin-bottom: 0; }
 .manifesto-point {
 	background: rgba(255,255,255,0.03);
 	border: 1px solid rgba(126,184,218,0.1);
@@ -967,7 +968,8 @@ h2 {
 /* ─── Responsive ─── */
 
 @media (max-width: 1024px) {
-	.values-grid { grid-template-columns: repeat(2, 1fr); }
+	.values-grid,
+	.manifesto-list { grid-template-columns: repeat(2, 1fr); }
 	.portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -979,8 +981,6 @@ h2 {
 	.mission, .values, .manifesto, .ethics, .gates, .product, .portfolio, .team, .contact { padding: 80px 24px; }
 	.mission-grid { grid-template-columns: 1fr; gap: 36px; }
 	.ethics-grid { grid-template-columns: 1fr 1fr; }
-	.manifesto-list { grid-template-columns: 1fr; }
-	.manifesto-point:nth-child(5) { grid-column: auto; }
 	.gates-track { flex-direction: column; gap: 16px; }
 	.gate-arrow { display: none; }
 	.gate { width: 100%; }
@@ -1002,7 +1002,8 @@ h2 {
 @media (max-width: 560px) {
 	.hero-actions { flex-direction: column; align-items: stretch; }
 	.btn { width: 100%; }
-	.values-grid { grid-template-columns: 1fr; }
+	.values-grid,
+	.manifesto-list { grid-template-columns: 1fr; }
 	.ethics-grid { grid-template-columns: 1fr; }
 	.portfolio-grid { grid-template-columns: 1fr; }
 }

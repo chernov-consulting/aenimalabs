@@ -677,31 +677,7 @@ h2 {
 	flex-shrink: 0;
 	font-size: 14px;
 }
-.product-kill {
-	margin: 28px 0;
-	padding: 20px;
-	background: rgba(44,24,16,0.05);
-	border-radius: 12px;
-	border-left: 3px solid var(--warm-gold);
-}
-.product-kill-label {
-	font-family: 'Space Grotesk', sans-serif;
-	font-size: 10px;
-	font-weight: 600;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	color: var(--warm-gold);
-	margin-bottom: 8px !important;
-}
-.product-kill p {
-	font-family: 'DM Sans', sans-serif;
-	font-size: 14px !important;
-	line-height: 1.6;
-	color: var(--warm-walnut) !important;
-	margin-bottom: 0 !important;
-	max-width: none !important;
-}
-
+.product-status-panel .btn { margin-top: 16px; }
 /* ─── Portfolio ─── */
 
 .portfolio {

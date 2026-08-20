@@ -412,14 +412,36 @@ h2 {
 	border: none;
 	padding: 0;
 }
-.manifesto-text p { margin-bottom: 24px; }
-.manifesto-text p:last-child { margin-bottom: 0; }
+.manifesto-text p { margin-bottom: 0; }
+
+.manifesto-point {
+	padding-left: 28px;
+	border-left: 1px solid rgba(126,184,218,0.18);
+	margin-bottom: 36px;
+}
+.manifesto-point:last-of-type { margin-bottom: 0; }
+.manifesto-point-label {
+	display: block;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: var(--brand-blue);
+	margin-bottom: 12px;
+}
+.manifesto-point-num {
+	color: var(--brand-faint);
+	margin-right: 10px;
+}
 .manifesto-sign {
 	color: #FFF;
 	font-family: 'Space Grotesk', sans-serif;
 	font-size: clamp(18px, 2.2vw, 22px) !important;
 	letter-spacing: 0.5px;
-	margin-top: 40px !important;
+	margin-top: 48px !important;
+	padding-top: 32px;
+	border-top: 1px solid rgba(126,184,218,0.15);
 }
 
 /* ─── Ethical Code ─── */

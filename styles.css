@@ -395,15 +395,14 @@ h2 {
 }
 .values-inner { max-width: 1100px; margin: 0 auto; }
 .values h2 { color: #FFF; margin-bottom: 12px; }
-/* 3 + 2 across six tracks: five narrow columns starved the measure */
+/* Heading occupies the first cell, so both rows carry three items */
 .values-grid {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
-.value-card { grid-column: span 2; }
-.value-card:nth-child(4),
-.value-card:nth-child(5) { grid-column: span 3; }
+.values-intro { align-self: start; }
+.values-intro .values-lede { margin-bottom: 0; }
 .value-card {
 	background: rgba(255,255,255,0.04);
 	border: 1px solid rgba(126,184,218,0.1);
@@ -969,10 +968,6 @@ h2 {
 
 @media (max-width: 1024px) {
 	.values-grid { grid-template-columns: repeat(2, 1fr); }
-	.value-card,
-	.value-card:nth-child(4),
-	.value-card:nth-child(5) { grid-column: auto; }
-	.value-card:nth-child(5) { grid-column: 1 / -1; }
 	.portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1008,7 +1003,6 @@ h2 {
 	.hero-actions { flex-direction: column; align-items: stretch; }
 	.btn { width: 100%; }
 	.values-grid { grid-template-columns: 1fr; }
-	.value-card:nth-child(5) { grid-column: auto; }
 	.ethics-grid { grid-template-columns: 1fr; }
 	.portfolio-grid { grid-template-columns: 1fr; }
 }

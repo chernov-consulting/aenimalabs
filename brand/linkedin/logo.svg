@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <!-- LinkedIn logo: official Aenima Labs geometric AE on a full square.
+       Source paths: AENIMA_Labs_Logo_Dark.svg (brand kit). Square fill so
+       LinkedIn's rounded-rect mask does not leave a glowing cream disc. -->
+  <rect width="400" height="400" fill="#1A1A2E"/>
+  <g transform="translate(200,200)">
+    <polygon points="-72,80 -12,-80 -2,-80 -42,80" fill="#F5F3EF"/>
+    <polygon points="8,-80 18,-80 18,80 8,80" fill="#F5F3EF"/>
+    <rect x="-38" y="2" width="56" height="10" fill="#F5F3EF"/>
+    <rect x="8" y="-80" width="60" height="10" fill="#F5F3EF"/>
+    <rect x="8" y="2" width="50" height="10" fill="#F5F3EF"/>
+    <rect x="8" y="70" width="60" height="10" fill="#F5F3EF"/>
+  </g>
+</svg>

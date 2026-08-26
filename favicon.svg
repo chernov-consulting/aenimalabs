@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-	<circle cx="40" cy="40" r="40" fill="#1A1A2E"/>
-	<!-- Æ ligature: A-stroke + E -->
-	<!-- A diagonal left leg -->
-	<line x1="18" y1="58" x2="34" y2="20" stroke="#F5F3EF" stroke-width="4.5" stroke-linecap="round"/>
-	<!-- A crossbar -->
-	<line x1="22" y1="44" x2="33" y2="44" stroke="#F5F3EF" stroke-width="3.5" stroke-linecap="round"/>
-	<!-- E vertical spine -->
-	<line x1="36" y1="20" x2="36" y2="58" stroke="#F5F3EF" stroke-width="4.5" stroke-linecap="round"/>
-	<!-- E top arm -->
-	<line x1="36" y1="20" x2="56" y2="20" stroke="#F5F3EF" stroke-width="4" stroke-linecap="round"/>
-	<!-- E mid arm -->
-	<line x1="36" y1="40" x2="52" y2="40" stroke="#F5F3EF" stroke-width="3.5" stroke-linecap="round"/>
-	<!-- E bottom arm -->
-	<line x1="36" y1="58" x2="56" y2="58" stroke="#F5F3EF" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Optical-size Æ for 16–32px tabs. Same construction as AENIMA_Labs_Logo_Dark.svg,
+       but full-bleed navy (no circle, no black corners) and heavier bars so the
+       ligature still reads at favicon size. -->
+  <rect width="32" height="32" fill="#1A1A2E"/>
+  <g fill="#F5F3EF">
+    <!-- A left stroke (tapered) -->
+    <polygon points="3.5,27.5 10.2,4.5 14.2,4.5 8.6,27.5"/>
+    <!-- E stem (shared with A) -->
+    <rect x="13.2" y="4.5" width="4" height="23"/>
+    <!-- A crossbar + E middle -->
+    <rect x="7.2" y="14.2" width="17.6" height="3.6"/>
+    <!-- E top -->
+    <rect x="13.2" y="4.5" width="15.3" height="3.6"/>
+    <!-- E bottom -->
+    <rect x="13.2" y="23.9" width="15.3" height="3.6"/>
+  </g>
 </svg>
